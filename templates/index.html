@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>YouTube Downloader</title>
-  <link rel="stylesheet" href="/static/css/styles.css">
-  <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <h1>YouTube Downloader</h1>
-  <div class="card">
-    <form method="POST" id="downloadForm">
-      <div class="form-row">
-        <div class="form-group">
-          <input type="text" name="url" id="url" placeholder="https://" required>
-          <select name="download_type" id="download_type">
-            <option value="video">Vídeo</option>
-            <option value="audio">Áudio</option>
-            <option value="playlist">Playlist</option>
-          </select>
+  <head>
+    <meta charset="UTF-8" />
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>YouTube Downloader</h1>
+    <div class="card">
+      <form method="POST" id="downloadForm">
+        <div class="form-row">
+          <div class="form-group">
+            <input
+              type="text"
+              name="url"
+              id="url"
+              placeholder="https://"
+              required
+            />
+            <select name="download_type" id="download_type">
+              <option value="video">Vídeo</option>
+              <option value="audio">Áudio</option>
+              <option value="playlist">Playlist</option>
+            </select>
+          </div>
+          <button type="submit">Download</button>
         </div>
-        <button type="submit">Download</button>
+      </form>
+
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <div class="messages">
+        {% for category, message in messages %}
+        <div class="alert {{ category }}">{{ message }}</div>
+        {% endfor %}
       </div>
-    </form>
+      {% endif %} {% endwith %}
+    </div>
 
-    {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-        <div class="messages">
-          {% for category, message in messages %}
-            <div class="alert {{ category }}">{{ message }}</div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    {% endwith %}
-  </div>
+    <div id="historyCard" class="card history-card" style="display: none">
+      <h2>Histórico de Downloads</h2>
+      <div id="historyList" class="history-list"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
 
-  <div id="historyCard" class="card history-card" style="display: none;">
-    <h2>Histórico de Downloads</h2>
-    <div id="historyList" class="history-list"></div>
-    <div class="pagination" id="pagination"></div>
-  </div>
+    <div id="overlay" class="overlay" style="display: none">
+      <div class="spinner"></div>
+    </div>
 
-  <div id="overlay" class="overlay" style="display: none;">
-    <div class="spinner"></div>
-  </div>
-
-  <script src="/static/js/script.js"></script>
-</body>
+    <script src="/static/js/script.js"></script>
+  </body>
 </html>
