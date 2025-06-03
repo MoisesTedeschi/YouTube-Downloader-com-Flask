@@ -38,20 +38,19 @@ Este projeto é uma aplicação web simples para baixar vídeos, áudios ou play
 
 ## 📁 Estrutura do Projeto
 
-YouTube-Downloader-com-Flask
-│
-├── app.py # App principal Flask
-├── downloads/ # Pasta onde os vídeos/áudios são salvos
-├── static/
-│ ├── styles.css # Estilos customizados
-│ └── img/
-│ └── favicon.ico # Ícone da aba (adicione o seu aqui)
+youtube-downloader-flask/
+├── app.py                 # App principal Flask
+├── downloads/             # Pasta onde os vídeos/áudios são salvos
+├── static/                # Arquivos estáticos (CSS, imagens, etc.)
+│   ├── styles.css         # Estilos customizados
+│   └── img/
+│       └── favicon.ico    # Ícone da aba (adicione o seu aqui)
 ├── templates/
-│ └── index.html # Página principal da aplicação
+│   └── index.html         # Página principal da aplicação
 ├── tests/
-│ └── test_app.py # Testes com pytest
-└── README.md # Este arquivo
-
+│   └── test_app.py        # Testes com pytest
+├── README.md              # Este arquivo
+└── LICENSE                # Licença de uso (MIT)
 
 ---
 
