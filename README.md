@@ -1,2 +1,121 @@
-# YouTube-Downloader-com-Flask
-YouTube Downloader com Flask
+# 🎬 YouTube Downloader com Flask
+
+Este projeto é uma aplicação web simples para baixar vídeos, áudios ou playlists do YouTube utilizando a biblioteca [`yt-dlp`](https://github.com/yt-dlp/yt-dlp), com uma interface moderna em Flask + HTML + CSS puro (ou Tailwind opcional). Também exibe um histórico local de downloads usando `localStorage`.
+
+---
+
+## 🔧 Funcionalidades
+
+- 📥 Download de:
+  - Vídeos em alta qualidade
+  - Áudios em MP3
+  - Playlists completas
+- 🕒 Histórico de downloads salvos localmente (via browser `localStorage`)
+- 🧭 Paginação automática quando houver mais de 10 itens no histórico
+- 🎨 Interface moderna e responsiva com CSS personalizado
+- 🧩 Verificação automática da presença do `ffmpeg`
+- 🔒 Proteção contra interações durante o download com loading overlay
+
+---
+
+## 📦 Tecnologias Utilizadas
+
+### Backend
+
+- [Python 3.10+](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- `ffmpeg` (para conversão de áudio)
+
+### Frontend
+
+- HTML5
+- CSS3 (ou [TailwindCSS](https://tailwindcss.com/) se preferir)
+- JavaScript puro (sem dependências externas)
+- `localStorage` para manter histórico
+
+---
+
+## 📁 Estrutura do Projeto
+
+YouTube-Downloader-com-Flask
+│
+├── app.py # App principal Flask
+├── downloads/ # Pasta onde os vídeos/áudios são salvos
+├── static/
+│ ├── styles.css # Estilos customizados
+│ └── img/
+│ └── favicon.ico # Ícone da aba (adicione o seu aqui)
+├── templates/
+│ └── index.html # Página principal da aplicação
+├── tests/
+│ └── test_app.py # Testes com pytest
+└── README.md # Este arquivo
+
+
+---
+
+## ▶️ Como Executar
+
+1. **Clone o repositório**
+
+```bash
+git clone https://github.com/seu-usuario/youtube-downloader-flask.git
+cd youtube-downloader-flask
+```
+
+2. **Crie um ambiente virtual**
+
+```
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+```
+
+
+3. **Instale as dependências**
+
+```
+pip install -r requirements.txt
+```
+
+Caso não exista um requirements.txt, instale manualmente:
+
+```
+pip install flask yt-dlp
+```
+
+4. **Execute o app**
+
+```
+python app.py
+```
+
+5. **Acesse no navegador**
+
+```
+http://127.0.0.1:5000/
+```
+
+## 🧪 Rodando os Testes
+
+```
+pytest tests/
+```
+
+Certifique-se de estar com o diretório correto e que seu arquivo principal esteja acessível pelo PYTHONPATH.
+
+## 📝 Observações
+
+- O histórico de downloads é salvo no navegador do usuário, não no servidor.
+
+- A conversão de áudio exige o ffmpeg instalado e disponível no PATH.
+
+- Não são armazenados arquivos no servidor além da pasta downloads/.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+## 🙋‍♂️ Autor
+Moisés Tedeschi de Melo
