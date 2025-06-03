@@ -30,7 +30,7 @@ Este projeto é uma aplicação web simples para baixar vídeos, áudios ou play
 ### Frontend
 
 - HTML5
-- CSS3 (ou [TailwindCSS](https://tailwindcss.com/) se preferir)
+- CSS3
 - JavaScript puro (sem dependências externas)
 - `localStorage` para manter histórico
 
