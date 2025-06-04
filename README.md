@@ -75,17 +75,10 @@ source venv/bin/activate  # Linux/macOS
 venv\Scripts\activate     # Windows
 ```
 
-
 3. **Instale as dependências**
 
 ```
 pip install -r requirements.txt
-```
-
-Caso não exista um requirements.txt, instale manualmente:
-
-```
-pip install flask yt-dlp
 ```
 
 4. **Execute o app**
@@ -103,10 +96,8 @@ http://127.0.0.1:5000/
 ## 🧪 Rodando os Testes
 
 ```
-pytest tests/
+pytest test_app.py
 ```
-
-Certifique-se de estar com o diretório correto e que seu arquivo principal esteja acessível pelo PYTHONPATH.
 
 ## 📝 Observações
 
@@ -121,4 +112,4 @@ Certifique-se de estar com o diretório correto e que seu arquivo principal este
 Este projeto está licenciado sob a licença MIT.
 
 ## 🙋‍♂️ Autor
-Moisés Tedeschi de Melo
+Moisés Tedeschi de Melo [MOA]
