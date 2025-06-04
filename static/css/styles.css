@@ -180,3 +180,16 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 540px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row button {
+    width: 100%;
+  }
+  .history-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
