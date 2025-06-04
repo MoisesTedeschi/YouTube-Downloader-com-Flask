@@ -75,6 +75,12 @@ function loadHistory() {
   function renderPagination(current) {
     const totalPages = Math.ceil(uniqueHistory.length / itemsPerPage);
     pagination.innerHTML = "";
+
+    // Só renderiza os botões se houver mais de 1 página
+    if (totalPages <= 1) {
+      return;
+    }
+
     for (let i = 1; i <= totalPages; i++) {
       const btn = document.createElement("button");
       btn.textContent = i;
