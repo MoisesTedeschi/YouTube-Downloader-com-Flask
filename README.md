@@ -2,6 +2,8 @@
 
 Este projeto é uma aplicação web simples para baixar vídeos, áudios ou playlists do YouTube utilizando a biblioteca [`yt-dlp`](https://github.com/yt-dlp/yt-dlp), com uma interface moderna em Flask + HTML + CSS puro. Também exibe um histórico local de downloads usando `localStorage`.
 
+![Página inial da aplicação - Input de URL, Opções e Botão de Download.](./static/img/yt-downloader.png)
+
 ---
 
 ## 🔧 Funcionalidades
