@@ -1,6 +1,6 @@
 # 🎬 YouTube Downloader com Flask
 
-Este projeto é uma aplicação web simples para baixar vídeos, áudios ou playlists do YouTube utilizando a biblioteca [`yt-dlp`](https://github.com/yt-dlp/yt-dlp), com uma interface moderna em Flask + HTML + CSS puro (ou Tailwind opcional). Também exibe um histórico local de downloads usando `localStorage`.
+Este projeto é uma aplicação web simples para baixar vídeos, áudios ou playlists do YouTube utilizando a biblioteca [`yt-dlp`](https://github.com/yt-dlp/yt-dlp), com uma interface moderna em Flask + HTML + CSS puro. Também exibe um histórico local de downloads usando `localStorage`.
 
 ---
 
@@ -41,6 +41,7 @@ Este projeto é uma aplicação web simples para baixar vídeos, áudios ou play
 ```
 youtube-downloader-flask/
 ├── app.py                 # App principal Flask
+├── test_app.py            # Testes com pytest
 ├── downloads/             # Pasta onde os vídeos/áudios são salvos
 ├── static/                # Arquivos estáticos (CSS, imagens, etc.)
 │   └── css/               # Estilos customizados
@@ -51,8 +52,6 @@ youtube-downloader-flask/
 │       └── favicon.ico    # Ícone da aba (adicione o seu aqui)
 ├── templates/
 │   └── index.html         # Página principal da aplicação
-├── tests/
-│   └── test_app.py        # Testes com pytest
 ├── README.md              # Este arquivo
 └── LICENSE                # Licença de uso (MIT)
 ```
